@@ -46,11 +46,14 @@ public class EmailDriver {
                 default:
     	           System.out.println("Please enter the valid choice!");		 
                }
-     
-              genpass=cs.generatePassword();
-              e1.setEmail(genemail);
-              e1.setPassword(genpass);
-              cs.showDetails(e1);
+		
+              if(choice>0 && choice<5)
+	        {
+                  genpass=cs.generatePassword();
+                  e1.setEmail(genemail);
+                  e1.setPassword(genpass);
+                  cs.showDetails(e1);
+	        }
      
 	}
 
